@@ -11,9 +11,7 @@ function secondMax(arr) {
       secondMax = val;
     }
   }
-  if (secondMax === -Infinity)
-    return null;
-  return secondMax;
+  return secondMax === -Infinity ? null : secondMax;
 }
 
 console.log(secondMax([10, 20, 30, 40])); // 30
