@@ -1,12 +1,9 @@
+// Function to print right-angled triangle pattern of stars
 function print(n) {
-  let str;
-  for (let row = 0; row < n; ++row) {
-    str = '';
-    for (let col = 0; col <= row; ++col) {
-      str += '*';
-    }
-    console.log(str);
+  for (let row = 1; row <= n; ++row) {
+    console.log('*'.repeat(row));
   }
 }
 
-print(6);
+// Example usage:
+print(10);
