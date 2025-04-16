@@ -4,14 +4,14 @@ function print(n) {
     const spaces = ' '.repeat(n - row);
     const totalCols = (2 * row) - 1;
     let col = 1;
-    let k = 0;
+    let counter = 0;
     let str = '';
     while (col <= totalCols) {
       if (col <= Math.ceil(totalCols / 2))
-        k++;
+        counter++;
       else
-        k--;
-      str += k;
+      counter--;
+      str += counter;
       col++;
     }
     console.log(spaces + str);
