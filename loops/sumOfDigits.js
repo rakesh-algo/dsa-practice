@@ -11,3 +11,4 @@ function sumOfDigits(num) {
 }
 
 console.log(sumOfDigits(12345)); // 15
+console.log(sumOfDigits(4136)); // 14
