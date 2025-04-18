@@ -1,4 +1,4 @@
-// Function to print enter-aligned pyramid pattern of stars
+// Function to print center-aligned pyramid pattern of stars
 function print(n) {
   for (let row = 1; row <= n; ++row) {
     const spaces = ' '.repeat(n - row);
