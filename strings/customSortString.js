@@ -1,4 +1,4 @@
-var customSortString = function(order, s) {
+function customSortString(order, s) {
   const freq = {};
   let result = '';
   
