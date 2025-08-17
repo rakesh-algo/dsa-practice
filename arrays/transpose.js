@@ -1,15 +1,16 @@
 function transpose(matrix) {
-  const result = new Array(matrix.length);
-  for (let i = 0; i < matrix.length; i++) {
-    result[i] = new Array(matrix[i].length);
-  }
+  const rows = matrix.length;
+  const cols = matrix[0].length;
+  const result = [];
 
-  for (let row = 0; row < matrix.length; row++) {
-    for (let col = 0; col < matrix[row].length; col++) {
+  for (let col = 0; col < cols; col++) {
+    result[col] = [];
+    for (let row = 0; row < rows; row++) {
       result[col][row] = matrix[row][col];
     }
   }
+
   return result;
 }
 
-console.log(transpose([[1,2,3], [4,5,6], [7, 8, 9]]));  // [ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ]
+console.log(transpose([[1,2,3], [4,5,6]])); // [[1, 4], [2, 5], [3, 6]]
