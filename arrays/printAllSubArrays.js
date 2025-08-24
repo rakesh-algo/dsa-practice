@@ -1,10 +1,8 @@
 function printAllSubarrays(nums) {
-  for (let i = 0;i < nums.length; i++) {
-    for (let j = i; j < nums.length; j++) {
-      const sub = [];
-      for (let k = i; k <= j; k++) {
-        sub.push(nums[k]);
-      }
+  for (let start = 0;start < nums.length; start++) {
+    const sub = [];
+    for (let end = start; end < nums.length; end++) {
+      sub.push(nums[end]);
       console.log('[' + sub.join() + ']');
     }
   }
