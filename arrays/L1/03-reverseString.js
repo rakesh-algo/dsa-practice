@@ -1,14 +1,11 @@
 function reverseString(s) {
-  let leftIndex = 0;
-  let rightIndex = s.length - 1;
+  const len = s.length;
+  const halfLength = Math.floor(len / 2);
 
-  while (leftIndex < rightIndex) {
-    const temp = s[leftIndex];
-    s[leftIndex] = s[rightIndex];
-    s[rightIndex] = temp;
-
-    leftIndex++;
-    rightIndex--;
+  for (let i = 0;i < halfLength; i++) {
+    const temp = s[i];
+    s[i] = s[len - 1 - i];
+    s[len - 1 - i] = temp;
   }
   return s;
 }
