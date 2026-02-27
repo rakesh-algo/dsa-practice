@@ -1,15 +1,13 @@
-function print(num) {
-  let str;
-  for (let row = 0;row < num; row++) {
-    str = '';
-    for (let col = 0; col < num; col++) {
-      str += '*';
-    }
-    console.log(str);
+function printSquare(n) {
+  const row = '*'.repeat(n);
+  for (let i = 1; i <= n; i++) {
+    console.log(row);
   }
 }
 
-print(10);          /*  **********
+printSquare(10);
+
+                    /*  **********
                         **********
                         **********
                         **********
