@@ -1,18 +1,28 @@
-function print(n) {
-  for (let row = 1; row <= n; ++row) {
-    const spaces = ' '.repeat(row === 1 ? 0 : row - 1);
-    const stars = Array.from({length: n - row + 1}, (_, i) => i + row).join(' ');
-    console.log(spaces + stars);
+function print(num) {
+  // Top Half
+  for (let row = 1; row <= num; row++) {
+    const arr = [];
+    for (let j = row; j <= num; j++) {
+      arr.push(j);
+    }
+    const spaces = ' '.repeat(row - 1);
+    console.log(spaces + arr.join(' '));
   }
 
-  for (let row = n - 1; row >= 1; row--) {
-    const spaces = ' '.repeat(row === 1 ? 0 : row - 1);
-    const stars = Array.from({length: n - row + 1}, (_, i) => i + row).join(' ');
-    console.log(spaces + stars);
+  // Bottom half
+  for (let row = num - 1; row > 0; row--) {
+    const spaces = ' '.repeat(row - 1);
+    const arr = [];
+    for (let j = row; j <= num; j++) {
+      arr.push(j);
+    }
+
+    console.log(spaces + arr.join(' '));
   }
 }
 
 print(7);
+
 
 /**
 1 2 3 4 5 6 7

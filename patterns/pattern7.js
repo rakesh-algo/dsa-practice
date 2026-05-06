@@ -1,5 +1,5 @@
 // Function to print hourglass pattern of stars
-function print(n) {
+function printHourGlass(n) {
   // Top half
   for (let row = 1; row <= Math.ceil(n / 2); ++row) {
     const leftStars  = '*'.repeat(row);
@@ -17,4 +17,4 @@ function print(n) {
   }
 }
 
-print(5);
+printHourGlass(5);

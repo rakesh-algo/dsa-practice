@@ -1,17 +1,30 @@
-// Function to print number pyramid pattern of stars
 function print(num) {
-  for (let row = 1; row <= num; row++) {
-    let str = '';
-    str += ' '.repeat(num - row);
-    for (let col = 1; col <= row; col++) {
-      str += col;
+  let row = [];
+  let i;
+  for (i = 1; i <= num; i++) {
+    for (let m = num - i; m > 0; m--)
+      row.push(' ');
+    for (let j = 1; j <= i; j++) {
+      row.push(j);
     }
 
-    for (let col = row - 1; col >= 1; col--) {
-      str += col;
+    if (i >= 2) {
+      for (let k = i - 1; k >= 1; k--)
+        row.push(k);
     }
-    console.log(str);
+    console.log(row.join(''));
+    row = [];
   }
 }
 
 print(5);
+
+/**
+          1
+        1 2 1
+      1 2 3 2 1
+    1 2 3 4 3 2 1
+  1 2 3 4 5 4 3 2 1
+ 
+
+ */

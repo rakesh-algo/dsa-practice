@@ -1,5 +1,5 @@
 // Function to print right aligned triangle pattern of stars
-function print(n) {
+function printRightAlignedTriangle(n) {
   for (let row = 1; row <= n; ++row) {
     const spaces = ' '.repeat(n - row);
     const stars = '*'.repeat(row);
@@ -7,7 +7,7 @@ function print(n) {
   }
 }
 
-print(5);
+printRightAlignedTriangle(5);
 
 /**
  *       *
